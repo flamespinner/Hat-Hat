@@ -42,12 +42,14 @@ Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(32, 8, PIN,
   NEO_GRB            + NEO_KHZ800);
 
 const uint16_t colors[] = {
-  matrix.Color(255, 0, 0), matrix.Color(0, 255, 0), matrix.Color(0, 0, 255) };
+  //matrix.Color(255, 0, 0), matrix.Color(0, 255, 0), matrix.Color(0, 0, 255) };
+  matrix.Color(0, 0, 255) };
+
 
 void setup() {
   matrix.begin();
   matrix.setTextWrap(false);
-  matrix.setBrightness(40);
+  matrix.setBrightness(70);
   matrix.setTextColor(colors[0]);
 }
 
@@ -57,8 +59,10 @@ int pass = 0;
 void loop() {
   matrix.fillScreen(0);
   matrix.setCursor(x, 0);
-  matrix.print(F("FIRST ROBOTICS"));
-  if(--x < -36) {
+  //matrix.print(F("FIRST ROBOTICS  MSHSL CAMPIONSHIP"));
+  matrix.print(F("MPAror Robotics Team 3926"));
+  //if(--x < -220) {
+  if(--x < 146) {
     x = matrix.width();
     if(++pass >= 3) pass = 0;
     matrix.setTextColor(colors[pass]);
