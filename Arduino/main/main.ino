@@ -1,6 +1,10 @@
+#include <SD.h>
+#include <SPI.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_NeoMatrix.h>
 #include <Adafruit_NeoPixel.h>
+#include <Adafruit_ImageReader.h>
+
 
 #define PIN 6
 
