@@ -49,22 +49,38 @@ void setup() {
   matrix.setTextWrap(false);
   matrix.setBrightness(40);
   matrix.setTextColor(colors[0]);
+
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 int x    = matrix.width();
 int pass = 0;
 
-void loop() {
+void rsl() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000);
+}
+
+void matrix1() {
   matrix.fillScreen(0);
   matrix.setCursor(x, 0);
-   matrix.print(F("MPAror Robotics Team 3926"));
- //matrix.print(F("            DESTINATION: DEEP SPACE"));
-  //matrix.print(F("Presented by The Boeing Company"));
+  matrix.print(F("MPAror Robotics Team 3926"));
   if(--x < -146) {
     x = matrix.width();
     if(++pass >= 3) pass = 0;
     matrix.setTextColor(colors[pass]);
-  }
+}
+}
+
+void ledshow() {
   matrix.show();
   delay(100);
+}
+
+void loop() {
+  rsl();
+  matrix1();
+  ledshow();
 }
