@@ -21,8 +21,6 @@ void setup() {
   matrix.setTextWrap(false);
   matrix.setBrightness(70);
   matrix.setTextColor(colors[0]);
-
-  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 int x    = matrix.width();
