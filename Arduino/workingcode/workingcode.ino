@@ -33,8 +33,8 @@ void loop() {
   matrix.setCursor(x, 0);
   //matrix.print(F("FIRST ROBOTICS  MSHSL CAMPIONSHIP"));
   matrix.print(F("MPAror Robotics Team 3926"));
-  matrix.print(F("DESTINATION: DEEP SPACE"));
-  matrix.print(F("Presented by The Boeing Company"));
+  //matrix.print(F("DESTINATION: DEEP SPACE"));
+  //matrix.print(F("Presented by The Boeing Company"));
   //if(--x < -220) {
   if(--x < 146) {
     x = matrix.width();
@@ -42,6 +42,6 @@ void loop() {
     matrix.setTextColor(colors[pass]);
   }
   matrix.show();
-  delay(100)
+  delay(100);
 
 }
