@@ -19,7 +19,7 @@ const uint16_t colors[] = {
 void setup() {
   matrix.begin();
   matrix.setTextWrap(false);
-  matrix.setBrightness(70);
+  matrix.setBrightness(60);
   matrix.setTextColor(colors[0]);
 
   pinMode(LED_BUILTIN, OUTPUT);
@@ -31,17 +31,12 @@ int pass = 0;
 void loop() {
   matrix.fillScreen(0);
   matrix.setCursor(x, 0);
-  //matrix.print(F("FIRST ROBOTICS  MSHSL CAMPIONSHIP"));
-  matrix.print(F("MPAror Robotics Team 3926"));
-  //matrix.print(F("DESTINATION: DEEP SPACE"));
-  //matrix.print(F("Presented by The Boeing Company"));
-  //if(--x < -220) {
-  if(--x < 146) {
+  matrix.print(F("MPAror Robotics"));
+  if(--x < -120) {
     x = matrix.width();
     if(++pass >= 3) pass = 0;
     matrix.setTextColor(colors[pass]);
   }
   matrix.show();
   delay(100);
-
 }

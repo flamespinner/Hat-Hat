@@ -29,7 +29,7 @@ int pass = 0;
 void loop() {
   matrix.fillScreen(0);
   matrix.setCursor(x, 0);
-  //matrix.print(F("FIRST ROBOTICS  MSHSL CAMPIONSHIP"));
+  //matrix.print(F("FIRST ROBOTICS INFINITE RECHARGE"));
   matrix.print(F("MPAror Robotics Team 3926"));
   //matrix.print(F("DESTINATION: DEEP SPACE"));
   //matrix.print(F("Presented by The Boeing Company"));
